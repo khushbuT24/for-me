@@ -2,6 +2,17 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+The wardrobe and stylist screens use the Python backend in
+`../forme/forme-agent`. Start it on port 8000 with its model credentials configured.
+The frontend proxies API calls to `http://127.0.0.1:8000`; set `AGENT_API_URL`
+in `.env.local` before starting or building Next.js to use a different backend.
+
+Open `/upload` to capture or upload a photo, `/wardrobe` to browse categories,
+and `/stylist` to request an outfit using your saved items. Identified items can
+be reviewed, edited or removed from their detail pages. The UI uses a browser-local
+development user ID shared by wardrobe and chat; login integration is not included.
+Full API documentation is in the backend's `docs/wardrobe-api.md`.
+
 First, run the development server:
 
 ```bash
